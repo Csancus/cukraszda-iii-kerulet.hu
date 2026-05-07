@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cukraszda-iii-kerulet.hu/sitemap.xml
