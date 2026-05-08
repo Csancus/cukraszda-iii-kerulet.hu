@@ -392,11 +392,19 @@
         z-index: 200;
         gap: 0;
       }
+      .nav-toggle:checked ~ .nav-links li { width: 100%; list-style: none; }
       .nav-toggle:checked ~ .nav-links a {
-        padding: 14px 22px;
-        border: none;
+        padding: 14px 22px !important;
+        border: none !important;
         width: 100%;
+        font-size: 1rem;
+        color: var(--p) !important;
+        background: transparent !important;
+        font-weight: 500;
+        min-height: 48px;
+        justify-content: flex-start;
       }
+      .nav-toggle:checked ~ .nav-links a:hover { background: var(--bg) !important; color: var(--a) !important; }
     }
 
     /* ═══════════════════════════════════════
