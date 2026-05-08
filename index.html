@@ -75,7 +75,8 @@
         "url": "https://czinielcukraszda.hu/",
         "sameAs": [
           "https://www.facebook.com/czinielcuki/",
-          "https://www.instagram.com/cziniel_cukraszda/"
+          "https://www.instagram.com/cziniel_cukraszda/",
+          "https://www.google.com/maps/place/Cziniel+Cukr%C3%A1szda+%C3%A9s+K%C3%A1v%C3%A9h%C3%A1z/@47.5205218,18.9357898,17z/data=!3m1!4b1!4m6!3m5!1s0x4741df639110dc31:0xad1313d046afc087!8m2!3d47.5205182!4d18.9383647!16s%2Fg%2F11xf9_tf4b"
         ],
         "telephone": "+36707714460",
         "email": "cziniel@czinielcukraszda.hu",
@@ -851,6 +852,30 @@
     }
     .faq-answer a, .about-text a { text-decoration: underline; }
 
+    .google-review-banner {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 22px;
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 100px;
+      text-decoration: none !important;
+      font-size: 0.95rem;
+      margin-top: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+      transition: all .2s ease;
+    }
+    .google-review-banner:hover {
+      border-color: var(--a);
+      box-shadow: 0 6px 18px rgba(0,0,0,.1);
+      transform: translateY(-1px);
+    }
+    .grb-stars { color: #f4a800; letter-spacing: 1.5px; font-size: 1rem; }
+    .grb-rating { font-weight: 800; color: var(--p); }
+    .grb-text { color: var(--text-muted); }
+    .grb-arrow { color: var(--a); font-weight: 700; }
+
     /* ═══════════════════════════════════════
        CONTACT
     ═══════════════════════════════════════ */
@@ -1257,7 +1282,13 @@
       <div class="reviews-header">
         <span class="section-tag">Vendégeink mondták</span>
         <h2 class="section-title">Vélemények</h2>
-        <p class="section-desc">4.4&#9733; átlag, 4478 értékelés alapján. Ezért szeretnek minket vendégeink.</p>
+        <p class="section-desc">Ezért szeretnek minket vendégeink.</p>
+        <a href="https://www.google.com/maps/place/Cziniel+Cukr%C3%A1szda+%C3%A9s+K%C3%A1v%C3%A9h%C3%A1z/@47.5205218,18.9357898,17z/data=!3m1!4b1!4m6!3m5!1s0x4741df639110dc31:0xad1313d046afc087!8m2!3d47.5205182!4d18.9383647!16s%2Fg%2F11xf9_tf4b" target="_blank" rel="noopener" class="google-review-banner" aria-label="Cziniel Cukrászda Google vélemények">
+          <span class="grb-stars">★★★★★</span>
+          <span class="grb-rating">4.4</span>
+          <span class="grb-text">· 4478 vélemény Google-ön</span>
+          <span class="grb-arrow">→</span>
+        </a>
       </div>
       <div class="reviews-grid">
         <div class="review-card">
