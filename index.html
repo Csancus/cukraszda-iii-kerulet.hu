@@ -8,7 +8,7 @@
   <meta name="keywords" content="cukrászda III kerület, cukrászda Római part, torta rendelés Budapest, brunch Budapest, reggeli III kerület, Cziniel cukrászda, sütemény Budapest">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#99693b">
-  <link rel="canonical" href="https://cukraszda-iii-kerulet.hu/">
+  <link rel="canonical" href="https://www.cukraszda-iii-kerulet.hu/">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -16,7 +16,7 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://cukraszda-iii-kerulet.hu/">
+  <meta property="og:url" content="https://www.cukraszda-iii-kerulet.hu/">
   <meta property="og:title" content="Cziniel Cukrászda – III. kerület | Torták, Brunch, Reggeli">
   <meta property="og:description" content="2025 Az Év Brunch és Reggelizőhelye – házi sütemények, egyedi torták, reggeli és brunch a Római parton. Hétfőtől vasárnapig 8:00–20:00.">
   <meta property="og:site_name" content="Cziniel Cukrászda">
@@ -41,8 +41,34 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebSite",
+        "@id": "https://www.cukraszda-iii-kerulet.hu/#website",
+        "url": "https://www.cukraszda-iii-kerulet.hu/",
+        "name": "Cziniel Cukrászda – III. kerület",
+        "description": "Cukrászda Budapest III. kerületében, a Római parton. Házi sütemények, brunch, reggeli, egyedi torták.",
+        "inLanguage": "hu-HU",
+        "publisher": { "@id": "https://www.cukraszda-iii-kerulet.hu/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.cukraszda-iii-kerulet.hu/#organization",
+        "name": "Cziniel Cukrászda",
+        "url": "https://www.cukraszda-iii-kerulet.hu/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.cukraszda-iii-kerulet.hu/favicon.svg"
+        },
+        "telephone": "+36707714460",
+        "email": "cziniel@czinielcukraszda.hu",
+        "sameAs": [
+          "https://www.facebook.com/czinielcuki/",
+          "https://www.instagram.com/cziniel_cukraszda/",
+          "https://czinielcukraszda.hu/"
+        ]
+      },
+      {
         "@type": ["Bakery", "LocalBusiness"],
-        "@id": "https://cukraszda-iii-kerulet.hu/#bakery",
+        "@id": "https://www.cukraszda-iii-kerulet.hu/#bakery",
         "name": "Cziniel Cukrászda",
         "alternateName": "Cziniel Cukrászda Budapest III. kerület",
         "description": "Házi sütemények, egyedi torták rendelés, reggeli és brunch a Római parton. 2025 Az Év Brunch és Reggelizőhelye díjas.",
@@ -80,7 +106,28 @@
           "reviewCount": "284",
           "bestRating": "5"
         },
-        "hasMap": "https://maps.google.com/?q=1031+Budapest+Nánási+út+55"
+        "hasMap": "https://maps.google.com/?q=1031+Budapest+Nánási+út+55",
+        "areaServed": [
+          {"@type": "AdministrativeArea", "name": "Budapest III. kerület"},
+          {"@type": "Place", "name": "Római part"}
+        ],
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.cukraszda-iii-kerulet.hu/favicon.svg"
+        },
+        "priceRange": "$$",
+        "servesCuisine": ["Cukrászda", "Brunch", "Reggeli", "Sütemény"],
+        "award": "2025 Az Év Brunch és Reggelizőhelye – NLTA"
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://www.cukraszda-iii-kerulet.hu/#offerings",
+        "name": "Cziniel Cukrászda kínálat",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "item": {"@type": "Service", "name": "Egyedi torták rendelése", "description": "Születésnapra, esküvőre, céges eseményre – egyedi, személyre szabott torták és sütemények.", "provider": {"@id": "https://www.cukraszda-iii-kerulet.hu/#bakery"}}},
+          {"@type": "ListItem", "position": 2, "item": {"@type": "Service", "name": "Reggeli és brunch", "description": "Naponta változó reggeli és brunch kínálat, friss pékáruk, tojásos fogások, smoothie-k és kézzel készített édességek.", "provider": {"@id": "https://www.cukraszda-iii-kerulet.hu/#bakery"}}},
+          {"@type": "ListItem", "position": 3, "item": {"@type": "Service", "name": "Házi sütemények", "description": "Naponta friss házi sütemények, minőségi alapanyagokból, a Római parton.", "provider": {"@id": "https://www.cukraszda-iii-kerulet.hu/#bakery"}}}
+        ]
       },
       {
         "@type": "FAQPage",

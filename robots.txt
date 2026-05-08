@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cukraszda-iii-kerulet.hu/sitemap.xml
+Sitemap: https://www.cukraszda-iii-kerulet.hu/sitemap.xml
