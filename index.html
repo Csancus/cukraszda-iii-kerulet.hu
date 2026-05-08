@@ -342,9 +342,10 @@
       .nav-phone { display: none; }
     }
 
-    .nav-burger { display: none; }
+    .nav-burger { display: none; order: 99; }
     @media (max-width: 768px) {
       .nav-links { display: none; }
+      .nav-phone { display: none !important; }
       .nav-burger {
         display: inline-flex;
         align-items: center;
@@ -358,7 +359,6 @@
         min-height: 44px;
         min-width: 44px;
         border-radius: 8px;
-        order: 99;
       }
       .nav-burger:hover { background: var(--bg); }
       .nav-toggle:checked ~ .nav-burger { background: var(--bg); }
