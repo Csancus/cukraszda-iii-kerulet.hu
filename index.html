@@ -9,6 +9,7 @@
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#99693b">
   <link rel="canonical" href="https://www.cukraszda-iii-kerulet.hu/">
+  <link rel="preload" as="image" href="/hero.webp" fetchpriority="high">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -21,13 +22,15 @@
   <meta property="og:description" content="Cziniel Cukrászda Budapest III. kerületében, a Római parton. Házi sütemények, torták, brunch és reggeli a Nánási út 55. szám alatt.">
   <meta property="og:site_name" content="Cziniel Cukrászda">
   <meta property="og:locale" content="hu_HU">
-  <meta property="og:image" content="https://www.cukraszda-iii-kerulet.hu/favicon.svg">
+  <meta property="og:image" content="https://www.cukraszda-iii-kerulet.hu/hero.jpg">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="1000">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cziniel Cukrászda – III. kerület | Torták, Brunch, Reggeli">
   <meta name="twitter:description" content="2025 Az Év Brunch és Reggelizőhelye – házi sütemények, egyedi torták, reggeli a Római parton. +36 70 771 4460">
-  <meta name="twitter:image" content="https://www.cukraszda-iii-kerulet.hu/favicon.svg">
+  <meta name="twitter:image" content="https://www.cukraszda-iii-kerulet.hu/hero.jpg">
 
   <!-- Geo tags -->
   <meta name="geo.region" content="HU-BU">
@@ -115,7 +118,9 @@
         ],
         "image": {
           "@type": "ImageObject",
-          "url": "https://www.cukraszda-iii-kerulet.hu/favicon.svg"
+          "url": "https://www.cukraszda-iii-kerulet.hu/hero.jpg",
+          "width": 800,
+          "height": 1000
         },
         "priceRange": "$$",
         "servesCuisine": ["Cukrászda", "Brunch", "Reggeli", "Sütemény"],
@@ -405,7 +410,35 @@
     .hero {
       background: linear-gradient(160deg, #fdf8f3 0%, #ffffff 100%);
       padding: 5rem 0 4.5rem;
-      text-align: center;
+    }
+
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-content { text-align: left; }
+
+    .hero-image {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(44,24,16,.18);
+      aspect-ratio: 4 / 5;
+      max-width: 420px;
+      justify-self: end;
+      width: 100%;
+    }
+    .hero-image img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .hero .container { grid-template-columns: 1fr; gap: 2rem; }
+      .hero-content { text-align: center; }
+      .hero-image { justify-self: center; max-width: 320px; }
     }
 
     .hero-eyebrow {
@@ -1169,17 +1202,33 @@
   ═══════════════════════════════════════ -->
   <section class="hero">
     <div class="container">
-      <span class="hero-eyebrow">Házi sütemények, torták, brunch &middot; Római part &middot; 2025 díjas</span>
-      <h1>Cukrászda III. kerület Cziniel</h1>
-      <p class="hero-subtitle">2025 Az Év Brunch és Reggelizőhelye – naponta friss, minden nap különleges.</p>
-      <div>
-        <span class="award-badge">
-          &#127942; 2025 Az Év Brunch és Reggelizőhelye – NLTA díj
-        </span>
+      <div class="hero-content">
+        <span class="hero-eyebrow">Házi sütemények, torták, brunch &middot; Római part &middot; 2025 díjas</span>
+        <h1>Cukrászda III. kerület Cziniel</h1>
+        <p class="hero-subtitle">2025 Az Év Brunch és Reggelizőhelye – naponta friss, minden nap különleges.</p>
+        <div>
+          <span class="award-badge">
+            &#127942; 2025 Az Év Brunch és Reggelizőhelye – NLTA díj
+          </span>
+        </div>
+        <div class="hero-ctas">
+          <a href="https://czinielcukraszda.hu/kezdolap-romai/webshop-r/" target="_blank" rel="noopener noreferrer" class="btn-primary">Nézd meg a kínálatot</a>
+          <a href="tel:+36707714460" class="btn-secondary">&#9742; Hívj minket most</a>
+        </div>
       </div>
-      <div class="hero-ctas">
-        <a href="https://czinielcukraszda.hu/kezdolap-romai/webshop-r/" target="_blank" rel="noopener noreferrer" class="btn-primary">Nézd meg a kínálatot</a>
-        <a href="tel:+36707714460" class="btn-secondary">&#9742; Hívj minket most</a>
+      <div class="hero-image">
+        <picture>
+          <source srcset="/hero.webp" type="image/webp">
+          <img
+            src="/hero.jpg"
+            alt="Cziniel Cukrászda – házi sütemények és torták Budapest III. kerület, Római part"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            width="800"
+            height="1000"
+          />
+        </picture>
       </div>
     </div>
   </section>
