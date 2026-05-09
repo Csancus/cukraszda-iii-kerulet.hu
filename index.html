@@ -337,7 +337,7 @@
       }
     }
 
-    .nav-link-phone { color: var(--a) !important; font-weight: 700 !important; }
+    .nav-link-phone { display: none !important; color: var(--a) !important; font-weight: 700 !important; }
     @media (max-width: 768px) {
       .nav-phone { display: none; }
     }
@@ -394,6 +394,7 @@
       }
       .nav-toggle:checked ~ .nav-links a:hover { background: var(--bg) !important; color: var(--a) !important; }
       .nav-toggle:checked ~ .nav-links .nav-link-phone {
+        display: flex !important;
         color: var(--a) !important;
         font-weight: 700 !important;
         border-top: 1px solid rgba(0,0,0,.07) !important;
