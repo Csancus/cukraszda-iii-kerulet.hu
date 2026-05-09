@@ -380,6 +380,7 @@
       .nav-toggle:checked ~ .nav-links a {
         padding: 14px 22px !important;
         border: none !important;
+        border-bottom: none !important;
         width: 100%;
         font-size: 1rem;
         color: var(--p) !important;
@@ -387,8 +388,17 @@
         font-weight: 500;
         min-height: 48px;
         justify-content: flex-start;
+        white-space: normal !important;
+        letter-spacing: 0 !important;
+        box-shadow: none !important;
       }
       .nav-toggle:checked ~ .nav-links a:hover { background: var(--bg) !important; color: var(--a) !important; }
+      .nav-toggle:checked ~ .nav-links .nav-link-phone {
+        color: var(--a) !important;
+        font-weight: 700 !important;
+        border-top: 1px solid rgba(0,0,0,.07) !important;
+        margin-top: 4px;
+      }
     }
 
     /* ═══════════════════════════════════════
@@ -1558,4 +1568,16 @@
   </footer>
 
 <script>
-(functi
+(function(){
+  var t=document.getElementById('nav-toggle');
+  if(!t)return;
+  document.addEventListener('click',function(e){
+    if(t.checked&&!e.target.closest('nav'))t.checked=false;
+  });
+  document.querySelectorAll('.nav__links a').forEach(function(a){
+    a.addEventListener('click',function(){t.checked=false;});
+  });
+})();
+</script>
+</body>
+</html>
