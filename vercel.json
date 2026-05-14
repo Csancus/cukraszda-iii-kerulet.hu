@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "cukraszda-iii-kerulet.hu" }],
+      "destination": "https://www.cukraszda-iii-kerulet.hu/:path*",
+      "permanent": true
+    }
+  ]
+}
