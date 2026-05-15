@@ -9,7 +9,8 @@
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#99693b">
   <link rel="canonical" href="https://www.cukraszda-iii-kerulet.hu/">
-  <link rel="preload" as="image" imagesrcset="/hero-sm.webp 480w, /hero.webp 800w" imagesizes="(max-width: 768px) 480px, 420px" fetchpriority="high">
+  <link rel="preload" as="image" media="(max-width: 768px)" href="/hero-sm.webp" fetchpriority="high">
+  <link rel="preload" as="image" media="(min-width: 769px)" href="/hero.webp" fetchpriority="high">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -1221,11 +1222,11 @@
       </div>
       <div class="hero-image">
         <picture>
-          <source type="image/webp" srcset="/hero-sm.webp 480w, /hero.webp 800w" sizes="(max-width: 768px) 480px, 420px">
+          <source media="(max-width: 768px)" type="image/webp" srcset="/hero-sm.webp">
+          <source media="(max-width: 768px)" srcset="/hero-sm.jpg">
+          <source type="image/webp" srcset="/hero.webp">
           <img
             src="/hero.jpg"
-            srcset="/hero-sm.jpg 480w, /hero.jpg 800w"
-            sizes="(max-width: 768px) 480px, 420px"
             alt="Cziniel Cukrászda – házi sütemények és torták Budapest III. kerület, Római part"
             loading="eager"
             fetchpriority="high"
